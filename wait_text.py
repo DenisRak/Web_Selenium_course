@@ -8,7 +8,7 @@ import math
 def calc(x):
     return str(math.log(abs(12*math.sin(int(x)))))
 
-with webdriver.Chrome(service=Service(ChromeDriverManager().install())) as driver:
+with webdriver.Chrome() as driver:
     driver.get("http://suninjuly.github.io/explicit_wait2.html")
     wait = WebDriverWait(driver, 15, poll_frequency=1)
     element = ("xpath","//h5[@id='price']")
