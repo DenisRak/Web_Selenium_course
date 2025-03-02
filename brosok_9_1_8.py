@@ -10,7 +10,7 @@ with webdriver.Chrome() as driver:
     pieces = driver.find_elements(By.CLASS_NAME, "piece")
     gryds = driver.find_elements(By.CLASS_NAME, "range")
     action = ActionChains(driver)
-    for p,g  in zip(pieces, gryds):
+    for p, g in zip(pieces, gryds):
 
         action.drag_and_drop(p,g).perform()
     time.sleep(5)
