@@ -7,7 +7,6 @@ with webdriver.Chrome() as browser:
     element = browser.find_element(By.TAG_NAME, 'iframe')
     browser.switch_to.frame(element)
     content = browser.page_source
-
     res = re.findall(r'(?<=\*)\w+(?=\*)', content)
 
     print(''.join(res))
