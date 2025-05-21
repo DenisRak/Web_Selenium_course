@@ -14,3 +14,4 @@ with webdriver.Chrome() as browser:
     secret = WebDriverWait(browser, 5).until(EC.visibility_of_element_located((By.ID, "message")))
     print(secret.text)
     time.sleep(3)
+
