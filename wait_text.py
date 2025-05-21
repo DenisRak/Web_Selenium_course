@@ -11,7 +11,7 @@ def calc(x):
 with webdriver.Chrome() as driver:
     driver.get("http://suninjuly.github.io/explicit_wait2.html")
     wait = WebDriverWait(driver, 15, poll_frequency=1)
-    element = ("xpath","//h5[@id='price']")
+    element = ("xpath", "//h5[@id='price']")
     wait.until(EC.text_to_be_present_in_element(element,"$100"))
     driver.find_element("xpath","//button[@id='book']").click()
     res = driver.find_element("xpath","//span[@id='input_value']").text
